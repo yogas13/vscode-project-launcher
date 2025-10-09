@@ -1,0 +1,8 @@
+# Core dependencies
+# tkinter - included with Python
+pillow>=8.0.0
+configparser
+
+# Optional dependencies for enhanced features
+pystray>=0.19.0  # System tray support
+watchdog>=2.0.0  # File system monitoring
